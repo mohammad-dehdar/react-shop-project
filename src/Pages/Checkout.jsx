@@ -11,7 +11,7 @@ function Checkout() {
   if (!state.itemCounters) return (<div><p>Empty</p></div>)
   return (
     <div className="flex items-start space-x-2">
-      <BasketSidebar state={state}/>
+      <BasketSidebar state={state} clickHandler={clickHandler}/>
       <div className="w-full">
         {state.selectedItems.map((item) => (
           <BasketCard
